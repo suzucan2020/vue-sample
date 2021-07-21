@@ -15,11 +15,12 @@ module.exports = {
 npm run build
 ```
 
-
-```
-/home/bitnami/apps/wordpress/htdocs/app-name/
-```
+## edit htaccess
 
 ```
 apps/wordpress/conf/httpd-app.conf
+```
+
+```
+/home/bitnami/apps/wordpress/htdocs/app-name/
 ```
