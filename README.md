@@ -14,3 +14,12 @@ module.exports = {
 ```
 npm run build
 ```
+
+
+```
+/home/bitnami/apps/wordpress/htdocs/app-name/
+```
+
+```
+apps/wordpress/conf/httpd-app.conf
+```
