@@ -16,7 +16,10 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
+    base: {
+      href: 'router.base'
+    }
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -41,6 +44,10 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
   ],
+
+  router: {
+    base: '/app-name/',
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
