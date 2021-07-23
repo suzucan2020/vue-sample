@@ -1,80 +1,95 @@
 <template>
   <v-card
-    elevation="24"
-    max-width="444"
-    class="mx-auto"
+    :loading="loading"
+    class="mx-auto my-12"
+    max-width="374"
   >
-    <v-system-bar lights-out></v-system-bar>
-    <v-carousel
-      :continuous="false"
-      :cycle="cycle"
-      :show-arrows="false"
-      hide-delimiter-background
-      delimiter-icon="mdi-minus"
-      height="300"
-    >
-      <v-carousel-item
-        v-for="(slide, i) in slides"
-        :key="i"
+    <template slot="progress">
+      <v-progress-linear
+        color="deep-purple"
+        height="10"
+        indeterminate
+      ></v-progress-linear>
+    </template>
+
+    <v-img
+      height="250"
+      src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
+    ></v-img>
+
+    <v-card-title>Cafe Badilico</v-card-title>
+
+    <v-card-text>
+      <v-row
+        align="center"
+        class="mx-0"
       >
-        <v-sheet
-          :color="colors[i]"
-          height="100%"
-          tile
-        >
-          <v-row
-            class="fill-height"
-            align="center"
-            justify="center"
-          >
-            <div class="text-h2">
-              {{ slide }} Slide
-            </div>
-          </v-row>
-        </v-sheet>
-      </v-carousel-item>
-    </v-carousel>
-    <v-list two-line>
-      <v-list-item>
-        <v-list-item-avatar>
-          <v-img src="https://cdn.vuetifyjs.com/images/john.png"></v-img>
-        </v-list-item-avatar>
-        <v-list-item-content>
-          <v-list-item-title>John Leider</v-list-item-title>
-          <v-list-item-subtitle>Author</v-list-item-subtitle>
-        </v-list-item-content>
-        <v-list-item-action>
-          <v-switch
-            v-model="cycle"
-            label="Cycle Slides"
-            inset
-          ></v-switch>
-        </v-list-item-action>
-      </v-list-item>
-    </v-list>
+        <v-rating
+          :value="4.5"
+          color="amber"
+          dense
+          half-increments
+          readonly
+          size="14"
+        ></v-rating>
+
+        <div class="grey--text ms-4">
+          4.5 (413)
+        </div>
+      </v-row>
+
+      <div class="my-4 text-subtitle-1">
+        $ • Italian, Cafe
+      </div>
+
+      <div>Small plates, salads & sandwiches - an intimate setting with 12 indoor seats plus patio seating.</div>
+    </v-card-text>
+
+    <v-divider class="mx-4"></v-divider>
+
+    <v-card-title>Tonight's availability</v-card-title>
+
+    <v-card-text>
+      <v-chip-group
+        v-model="selection"
+        active-class="deep-purple accent-4 white--text"
+        column
+      >
+        <v-chip>5:30PM</v-chip>
+
+        <v-chip>7:30PM</v-chip>
+
+        <v-chip>8:00PM</v-chip>
+
+        <v-chip>9:00PM</v-chip>
+      </v-chip-group>
+    </v-card-text>
+
+    <v-card-actions>
+      <v-btn
+        color="deep-purple lighten-2"
+        text
+        @click="reserve"
+      >
+        Reserve
+      </v-btn>
+    </v-card-actions>
   </v-card>
 </template>
 
 <script>
   export default {
-    data () {
-      return {
-        colors: [
-          'green',
-          'secondary',
-          'yellow darken-4',
-          'red lighten-2',
-          'orange darken-1',
-        ],
-        cycle: false,
-        slides: [
-          'First',
-          'Second',
-          'Third',
-          'Fourth',
-          'Fifth',
-        ],
-      }
+    data: () => ({
+      loading: false,
+      selection: 1,
+    }),
+
+    methods: {
+      reserve () {
+        this.loading = true
+
+        setTimeout(() => (this.loading = false), 2000)
+      },
     },
   }
 </script>
