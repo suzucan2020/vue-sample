@@ -17,4 +17,5 @@ const useCounter = () => {
     decrement,
   }
 }
+export type CounterStore = ReturnType<typeof useCounter>
 export default useCounter

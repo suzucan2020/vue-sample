@@ -1,23 +1,18 @@
 <template>
-  <div>
-    <div>{{ count }}</div>
-    <button @click="increment">+</button>
-    <button @click="decrement">-</button>
-  </div>
+  <SampleProvide>
+    <SampleMergeComponent />
+  </SampleProvide>
 </template>
 
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
-import useCounter from '~/composition/useCounter'
+import SampleProvide from '~/components/SampleProviderComponent.vue'
+import SampleMergeComponent from '~/components/SampleMergeComponent.vue'
 
 export default defineComponent({
-  setup() {
-    const { count, increment, decrement } = useCounter()
-    return {
-      count,
-      increment,
-      decrement
-    }
+  components: {
+    SampleProvide,
+    SampleMergeComponent
   }
 })
 </script>
