@@ -15,13 +15,13 @@
   </v-row>
   <v-row>
     <v-col>
-      <carousel />
+      <card1 />
     </v-col>
     <v-col>
-      <carousel />
+      <card1 />
     </v-col>
     <v-col>
-      <carousel />
+      <card1 />
     </v-col>
   </v-row>
 </v-container>
