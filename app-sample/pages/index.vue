@@ -1,48 +1,23 @@
 <template>
-  <div class="container">
-    <p>{{ info.text }}</p>
-    <button @click="onClicked">ボタン</button>
+  <div>
+    <div>{{ count }}</div>
+    <button @click="increment">+</button>
+    <button @click="decrement">-</button>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive } from "@nuxtjs/composition-api"
+import { defineComponent } from '@nuxtjs/composition-api'
+import useCounter from '~/composition/useCounter'
 
 export default defineComponent({
-  head: {
-    title: "Sample"
-  },
   setup() {
-    /*
-      data() {
-        return {
-          text: ""
-        }
-      }
-    */
-    const info = reactive({
-      text: ""
-    })
-
-    /*
-      created() {
-        this.text = "まだ押されていません"
-      }
-    */
-    info.text = "まだ押されていません"
-
-    /*
-      methods: {
-        onClicked() {
-          this.text = "押されたよ！"
-        }
-      }
-    */
-    const onClicked = () => {
-      info.text = "押されたよ！"
+    const { count, increment, decrement } = useCounter()
+    return {
+      count,
+      increment,
+      decrement
     }
-
-    return { info, onClicked }
   }
 })
 </script>
