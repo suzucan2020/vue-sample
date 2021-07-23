@@ -5,23 +5,23 @@
       <carousel />
     </v-col>
   </v-row>
-  <v-row class="grey lighten-3" style="height: 150px;">
-    <v-col style="background-color: #FFF9C4">
-      13
+  <v-row>
+    <v-col>
+      <carousel />
     </v-col>
-    <v-col style="background-color: #FFECB3">
-      14
+    <v-col>
+      <carousel />
     </v-col>
   </v-row>
-  <v-row class="grey lighten-3" style="height: 150px;">
-    <v-col style="background-color: #FFCDD2">
-      19
+  <v-row>
+    <v-col>
+      <carousel />
     </v-col>
-    <v-col style="background-color: #F8BBD0">
-      20
+    <v-col>
+      <carousel />
     </v-col>
-    <v-col style="background-color: #E1BEE7">
-      21
+    <v-col>
+      <carousel />
     </v-col>
   </v-row>
 </v-container>
