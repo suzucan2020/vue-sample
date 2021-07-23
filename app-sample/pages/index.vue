@@ -7,10 +7,10 @@
   </v-row>
   <v-row>
     <v-col>
-      <carousel />
+      <card />
     </v-col>
     <v-col>
-      <carousel />
+      <card />
     </v-col>
   </v-row>
   <v-row>
