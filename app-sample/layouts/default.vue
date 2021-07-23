@@ -1,33 +1,27 @@
 <template>
-  <v-app dark>
-    <v-app-bar
-      color="primary"
-      :clipped-left="$vuetify.breakpoint.lgAndUp"
-      clipped-right
+  <v-app id="inspire">
+    <v-navigation-drawer
+      v-model="drawer"
       app
     >
-      <v-toolbar-title
-        style="width: 300px"
-        class="ml-0 pl-4"
-        @click="$router.push('/')"
-      >
-        <span class="hidden-sm-and-down">{{ title }}</span>
-      </v-toolbar-title>
+      <!--  -->
+    </v-navigation-drawer>
+
+    <v-app-bar app>
+      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+
+      <v-toolbar-title>Application</v-toolbar-title>
     </v-app-bar>
-    <v-content>
-      <v-container>
-        <nuxt />
-      </v-container>
-    </v-content>
+
+    <v-main>
+      <!--  -->
+      <nuxt />
+    </v-main>
   </v-app>
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      title: 'GDrive Manager'
-    }
+  export default {
+    data: () => ({ drawer: null }),
   }
-}
 </script>
