@@ -1,7 +1,7 @@
 <template>
 <v-container>
-  <v-row class="grey lighten-3" style="height: 150px;">
-    <v-col style="background-color: #FFCDD2">
+  <v-row>
+    <v-col>
       <carousel />
     </v-col>
   </v-row>
