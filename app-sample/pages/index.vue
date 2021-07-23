@@ -15,13 +15,13 @@
   </v-row>
   <v-row>
     <v-col>
-      <card1 />
+      <card2 />
     </v-col>
     <v-col>
-      <card1 />
+      <card2 />
     </v-col>
     <v-col>
-      <card1 />
+      <card2 />
     </v-col>
   </v-row>
 </v-container>
