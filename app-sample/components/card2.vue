@@ -9,7 +9,9 @@
       src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
     >
       <v-row justify="center" align-content="center">
+      <v-col>
       <v-card-title>Top 10 Australian beaches</v-card-title>
+      </v-col>
       </v-row>
     </v-img>
 
