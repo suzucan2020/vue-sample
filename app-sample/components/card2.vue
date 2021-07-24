@@ -8,9 +8,9 @@
       height="200px"
       src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
     >
-      <v-layout justify-center>
+      <v-row justify="center" align-content="center">
       <v-card-title>Top 10 Australian beaches</v-card-title>
-      </v-layout>
+      </v-row>
     </v-img>
 
     <v-card-subtitle class="pb-0">
