@@ -1,14 +1,9 @@
 <template>
 <v-container>
   <v-row>
-    <v-col cols="12">
+    <v-col cols="6">
       <carousel />
     </v-col>
-  </v-row>
-  <v-row>
-    <v-col cols="6">
-      <card />
-    </v-col>
     <v-col cols="6">
       <card />
     </v-col>
@@ -18,14 +13,6 @@
       <card2 />
     </v-col>
     <v-col cols="4">
-      <card2 />
-    </v-col>
-    <v-col cols="4">
-      <card2 />
-    </v-col>
-  </v-row>
-  <v-row>
-    <v-col cols="12">
       <card3 />
     </v-col>
   </v-row>

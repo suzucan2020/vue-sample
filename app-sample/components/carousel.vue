@@ -1,7 +1,7 @@
 <template>
   <v-card
     elevation="24"
-    max-width="888"
+    max-width="444"
     class="mx-auto"
   >
     <v-system-bar lights-out></v-system-bar>
@@ -11,7 +11,7 @@
       :show-arrows="false"
       hide-delimiter-background
       delimiter-icon="mdi-minus"
-      height="700"
+      height="300"
     >
       <v-carousel-item
         v-for="(slide, i) in slides"
