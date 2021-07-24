@@ -1,4 +1,5 @@
 <template>
+  <v-container fluid>
   <v-row dense>
     <v-col
       v-for="card in cards"
@@ -24,6 +25,7 @@
       </v-card>
     </v-col>
   </v-row>
+  </v-container>
 </template>
 
 <script>
