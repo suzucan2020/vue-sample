@@ -8,7 +8,7 @@
       height="200px"
       src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
     >
-      < v-card-title >hello world</v-card-title>
+      <v-card-title>hello world</v-card-title>
     </v-img>
 
     <v-card-subtitle class="pb-0">
