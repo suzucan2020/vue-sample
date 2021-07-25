@@ -7,10 +7,9 @@
     </v-col>
   </v-row>
 
-  <v-row justify="center" align-content="center">
-    <v-col cols="12">
-    <h2>Hello</h2>
-    </v-col>
+  <v-row>
+    <h2 class="text-center">NEWS</h2>
+    <p class="text-center">news</p>
   </v-row>
 
   <v-row>
