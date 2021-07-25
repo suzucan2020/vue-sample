@@ -2,7 +2,7 @@
 <v-container fluid>
   <v-row>
     <v-col cols="12">
-      <TopTopImage />
+      <TopImage />
     </v-col>
   </v-row>
   <v-row>
