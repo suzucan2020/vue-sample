@@ -4,7 +4,7 @@
     max-width="400"
   >
     <v-img
-      class="white--text align-end"
+      class="white--text align-start"
       height="200px"
       src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
     >
