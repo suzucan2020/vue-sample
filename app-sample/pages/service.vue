@@ -2,7 +2,7 @@
 <v-container fluid>
   <v-row>
     <v-col cols="12">
-      <TopImageText />
+      <ServiceImageText />
     </v-col>
   </v-row>
   <v-row>
@@ -10,7 +10,7 @@
   </v-row>
   <v-row>
     <v-col cols="12">
-      <TopCard1 />
+      <ServiceCard1 />
     </v-col>
   </v-row>
   <v-row>
@@ -18,7 +18,7 @@
   </v-row>
   <v-row>
     <v-col cols="12">
-      <TopCard4 />
+      <ServiceCard4 />
     </v-col>
   </v-row>
 </v-container>
