@@ -10,7 +10,7 @@
         class="mx-auto"
         max-width="400"
       >
-        <h2> {{ card.title }} </h2>
+        <h3> {{ card.title }} </h3>
         <v-img 
           class="white--text align-end"
           height="200px"
