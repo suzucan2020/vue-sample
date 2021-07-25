@@ -1,7 +1,10 @@
 <template>
   <v-container fluid>
-
-  <h2> hello world </h2>
+  <div v-for
+    v-for="card in cards"
+    :key="card.title"
+  >
+  <h2> {{ card.title }} </h2>
   <v-row dense>
         <v-col cols="6">
         <v-img 
@@ -12,7 +15,7 @@
         </v-img>
         </v-col>
         <v-col cols="6">
-          <p> nuxt aaaa bbb </p>
+          <p> {{ card.text }} </p>
         </v-col>
   </v-row>
   </v-container>
