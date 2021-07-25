@@ -10,6 +10,7 @@
         <li v-for="user in users">
           {{ user.id }}
           {{ user.date }}
+          {{ user.title.rendered }}
           {{ user.link }}
         </li>
       </ul>
