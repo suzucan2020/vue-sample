@@ -4,14 +4,12 @@
     max-width="400"
   >
     <v-img
-      class="white--text align-start"
+      class="white--text align-center"
       height="200px"
       src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
     >
-      <v-row justify="center" align-content="center">
-        <v-col>
+      <v-row justify="center">
           <v-card-title>hello world</v-card-title>
-        </v-col>
       </v-row>
     </v-img>
 
