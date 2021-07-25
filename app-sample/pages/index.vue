@@ -1,25 +1,31 @@
 <template>
 <v-container fluid>
-  <v-row>
-    <v-col cols="12">
-      <TopImageText />
-    </v-col>
-  </v-row>
-  <v-row>
-    <h2>Hello</h2>
-  </v-row>
-  <v-row>
-    <v-col cols="12">
-      <TopCard1 />
-    </v-col>
-  </v-row>
-  <v-row>
-    <h2>World</h2>
-  </v-row>
-  <v-row>
-    <v-col cols="12">
-      <TopCard4 />
-    </v-col>
-  </v-row>
+<li v-for="post in posts" :key="post.id">
+  <p> {{ post.id }}</p>
 </v-container>
 </template>
+
+<script>
+  export default {
+    //fetchは取得したデータをstoreに保存する時に使う
+    async fetch() {
+      const res = await $axios.$get('http://13.231.178.0/wp-json/wp/v2/posts')
+      .catch((err) => {
+        console.error(err)
+      });
+      //storeにデータ保存してどこからでも扱えるようにする
+      await this.$nuxt.context.store.commit('saveAllPosts', res);
+    },
+    //asyncDataは返却地がそのコンポーネントのdataにマージされる。
+    async asyncData({ params, error, payload, store, $axios }) {
+      const res = await $axios.$get('http://13.231.178.0/wp-json/wp/v2/posts')
+      .catch((err) => {
+        console.error(err)
+      });
+      //this.postsでアクセス可能になる
+      return {
+        posts : res
+      }
+    }
+  }
+</script>
