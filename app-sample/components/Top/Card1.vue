@@ -11,7 +11,7 @@
         </v-img>
         </v-col>
         <v-col cols="6">
-          <div> nuxt aaaa bbb </div>
+          <p> nuxt aaaa bbb </p>
         </v-col>
   </v-row>
   </v-container>
