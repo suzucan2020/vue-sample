@@ -7,7 +7,7 @@
   </v-row>
   <v-row>
     <v-col cols="12">
-      <Topcard4 />
+      <TopCard4 />
     </v-col>
   </v-row>
 </v-container>
