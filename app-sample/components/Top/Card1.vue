@@ -2,16 +2,17 @@
   <v-container fluid>
   <v-row dense>
         <h2> hello world </h2>
-        <v-col>
+        <v-col cols="6">
         <v-img 
           class="white--text align-end"
           height="200px"
           src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
         >
         </v-img>
-        <v-col>
+        </v-col>
+        <v-col cols="6">
           <div> nuxt aaaa bbb </div>
-        <v-col>
+        </v-col>
   </v-row>
   </v-container>
 </template>
