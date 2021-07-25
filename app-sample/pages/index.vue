@@ -14,6 +14,12 @@
           {{ user.link }}
         </li>
       </ul>
+      <ul>
+        <li v-for="user in users">
+          {{ user.date }}
+          <a v-bind:href="user.link">{{ user.title.rendered }}</a>
+        </li>
+      </ul>
       <button @click="resetUser()">reset</button>
       <button @click="fetchUser()">fetch user</button>
     </div>
