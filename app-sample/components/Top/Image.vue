@@ -1,6 +1,6 @@
 <template>
     <v-img
-      class="white--text align-end"
+      class="white--text align-center"
       height="400px"
       src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
     >

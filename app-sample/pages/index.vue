@@ -10,6 +10,11 @@
   </v-row>
   <v-row>
     <v-col cols="12">
+      <TopNews />
+    </v-col>
+  </v-row> 
+  <v-row>
+    <v-col cols="12">
       <TopImageText />
     </v-col>
   </v-row>
