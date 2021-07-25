@@ -6,6 +6,7 @@
     >
       <v-row justify="center">
           <v-card-title>hello world</v-card-title>
+          <p>Enjoy Nuxt !!!</p>
       </v-row>
     </v-img>
 </template>
