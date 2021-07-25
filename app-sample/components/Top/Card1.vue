@@ -1,16 +1,7 @@
 <template>
   <v-container fluid>
   <v-row dense>
-    <v-col
-      v-for="card in cards"
-      :key="card.title"
-      :cols="card.flex"
-    >
-      <v-card
-        class="mx-auto"
-        max-width="400"
-      >
-        <h2> {{ card.title }} </h2>
+        <h2> hello world </h2>
         <v-col>
         <v-img 
           class="white--text align-end"
@@ -19,10 +10,8 @@
         >
         </v-img>
         <v-col>
-          <div> {{ card.text }} </div>
+          <div> nuxt aaaa bbb </div>
         <v-col>
-      </v-card>
-    </v-col>
   </v-row>
   </v-container>
 </template>
