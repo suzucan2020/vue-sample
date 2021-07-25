@@ -1,7 +1,8 @@
 <template>
   <v-container fluid>
+
+  <h2> hello world </h2>
   <v-row dense>
-        <h2> hello world </h2>
         <v-col cols="6">
         <v-img 
           class="white--text align-end"
