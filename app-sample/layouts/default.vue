@@ -18,6 +18,12 @@
     <v-spacer></v-spacer>
 
     <v-toolbar-items class="hidden-sm-and-down">
+      <v-btn text to="/" nuxt>
+        TOP
+      </v-btn>
+
+      <v-divider vertical></v-divider>
+
       <v-btn text to="/service" nuxt>
         SERVICE
       </v-btn>
