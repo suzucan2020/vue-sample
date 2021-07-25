@@ -1,8 +1,7 @@
 <template>
 <v-container fluid>
 <li v-for="post in posts" :key="post.id">
-  <p> {{ post.id }} </p> 
-  {{ post.date }} {{ post.title.rendered } {{ post.link }} </p>
+  <p> {{ post.id }} {{ post.date }} {{ post.link }} </p> 
 </v-container>
 </template>
 

@@ -1,31 +1,47 @@
 <template>
 <v-container fluid>
-<li v-for="post in posts" :key="post.id">
-  <p> {{ post.id }} {{ post.date }} {{ post.link }} </p> 
+
+    <div>
+      <Logo />
+      <h1 class="title">
+        nuxt-ssr-app
+      </h1>
+      <ul>
+        <li v-for="user in users">
+          {{ user.id }}
+          {{ user.date }}
+          {{ user.link }}
+        </li>
+      </ul>
+      <button @click="resetUser()">reset</button>
+      <button @click="fetchUser()">fetch user</button>
+    </div>
+
 </v-container>
 </template>
-
 <script>
-  export default {
-    //fetchは取得したデータをstoreに保存する時に使う
-    async fetch() {
-      const res = await $axios.$get('http://13.231.178.0/wp-json/wp/v2/posts')
-      .catch((err) => {
-        console.error(err)
-      });
-      //storeにデータ保存してどこからでも扱えるようにする
-      await this.$nuxt.context.store.commit('saveAllPosts', res);
-    },
-    //asyncDataは返却地がそのコンポーネントのdataにマージされる。
-    async asyncData({ params, error, payload, store, $axios }) {
-      const res = await $axios.$get('http://13.231.178.0/wp-json/wp/v2/posts')
-      .catch((err) => {
-        console.error(err)
-      });
-      //this.postsでアクセス可能になる
+export default {
+  asyncData({ $axios }) {
+    return $axios.get("http://13.231.178.0/wp-json/wp/v2/posts").then(res => {
       return {
-        posts : res
+        users: res.data
       }
+    })
+  },
+  data() {
+    return {
+      message: "hello nuxt ",
     }
+  },
+  methods: {
+    resetUser: function () {
+      this.users = []
+    },
+    fetchUser: function () {
+      this.$axios.get("http://13.231.178.0/wp-json/wp/v2/posts").then(res => {
+        this.users = res.data
+      })
+    },
   }
+}
 </script>
