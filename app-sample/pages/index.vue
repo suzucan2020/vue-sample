@@ -1,6 +1,11 @@
 <template>
 <v-container fluid>
   <v-row>
+    <v-col cols="12">
+      <ImageText />
+    </v-col>
+  </v-row>
+  <v-row>
     <v-col cols="6">
       <carousel />
     </v-col>
