@@ -5,7 +5,7 @@
       <TopImage />
     </v-col>
   </v-row>
-  <v-row>
+  <v-row justify="center">
     <h2>Hello</h2>
   </v-row>
   
