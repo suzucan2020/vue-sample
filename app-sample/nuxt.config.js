@@ -50,7 +50,7 @@ export default {
   },
 
   router: {
-    base: '/app-name/',
+    base: '/TANIZAWA_backup/app-name/',
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
