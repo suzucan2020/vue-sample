@@ -4,7 +4,9 @@
     <v-col
       v-for="card in cards"
       :key="card.title"
-      :cols="card.flex" >
+      :sm="card.flex" 
+      cols="12"
+      >
       <v-card
         class="mx-auto"
         max-width="400"
