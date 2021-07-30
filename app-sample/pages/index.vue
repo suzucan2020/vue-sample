@@ -18,7 +18,7 @@
     :key="post.id"
   >
   <v-row dense>
-    <v-col cols="6">
+    <v-col lg="6" offset-lg="3">
     <p> {{ post.date }} </p>
     </v-col>
 
