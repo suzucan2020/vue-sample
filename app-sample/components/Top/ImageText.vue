@@ -11,7 +11,7 @@
       >
         <v-img
           class="white--text align-center"
-          height="200px"
+          height="300px"
           src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
         >
           <v-row justify="center">
