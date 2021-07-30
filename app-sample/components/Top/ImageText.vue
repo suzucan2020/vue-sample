@@ -1,6 +1,6 @@
 <template>
   <v-container>
-  <v-row dense>
+  <v-row no-gutters>
     <v-col
       v-for="card in cards"
       :key="card.title"
