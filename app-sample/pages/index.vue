@@ -18,11 +18,11 @@
     :key="post.id"
   >
   <v-row dense>
-    <v-col lg="6" offset-lg="3">
+    <v-col lg="3" offset-lg="3">
     <p> {{ post.date }} </p>
     </v-col>
 
-    <v-col cols="6">
+    <v-col lg="3">
     <p><a v-bind:href="post.link">{{ post.title.rendered }}</a></p>
     </v-col>
   </v-row>
