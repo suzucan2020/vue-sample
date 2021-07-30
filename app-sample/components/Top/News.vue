@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid>
+  <v-container>
 <div v-for
     v-for="post in posts"
     :key="post.id"

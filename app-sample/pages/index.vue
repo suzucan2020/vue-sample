@@ -12,7 +12,7 @@
 
   <v-row>
     <v-col cols="12">
-        <v-container fluid>
+        <v-container>
 <div v-for
     v-for="post in posts"
     :key="post.id"
