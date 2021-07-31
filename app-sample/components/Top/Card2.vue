@@ -6,7 +6,7 @@
   >
      <v-card
         class="mx-auto"
-        max-width="800"
+        max-width="1200"
       >
   <h3> {{ card.title }} </h3>
   <v-row dense>
