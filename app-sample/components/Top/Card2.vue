@@ -28,11 +28,11 @@
 
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
-import topLogic from '~/composables/store/topLogic'
+import { topLogicCard2 } from '~/composables/store/topLogic'
 
 export default defineComponent({
   setup(){
-    const { data } = topLogic()
+    const { data } = topLogicCard2()
     return {
       data,
     }
