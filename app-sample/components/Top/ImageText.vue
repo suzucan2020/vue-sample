@@ -2,7 +2,7 @@
   <v-container>
   <v-row no-gutters>
     <v-col
-      v-for="card in cards"
+      v-for="card in data.cards"
       :key="card.title"
       :sm="card.flex" 
       cols="12"
@@ -26,14 +26,16 @@
   </v-container>
 </template>
 
-<script>
-  export default {
-    data: () => ({
-      cards: [
-        { title: 'A', text: 'Pre-fab homes', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', flex: 4 },
-        { title: 'B', text: 'Favorite road trips', src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg', flex: 4 },
-        { title: 'C', text: 'Pre-fab homes', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', flex: 4 },
-      ],
-    }),
+<script lang="ts">
+import { defineComponent } from '@nuxtjs/composition-api'
+import { topLogicImageText } from '~/composables/store/topLogic'
+
+export default defineComponent({
+  setup(){
+    const { data } = topLogicImageText()
+    return {
+      data,
+    }
   }
+})
 </script>
