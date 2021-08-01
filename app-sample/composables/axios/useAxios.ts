@@ -19,7 +19,7 @@ type baseState = {
   isLoading: boolean
 }
 
-const useAxios = (
+export const useAxios = (
   $axios: NuxtAxiosInstance,
   url: string,
   params?: Params,
