@@ -4,5 +4,5 @@
 
 - nuxt component function
   - https://rarejob-tech-dept.hatenablog.com/entry/2020/11/09/200000
-
-- https://rarejob-tech-dept.hatenablog.com/entry/2020/10/09/190000
+- nuxt axios
+  - https://rarejob-tech-dept.hatenablog.com/entry/2020/10/09/190000
