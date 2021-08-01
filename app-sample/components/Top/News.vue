@@ -1,25 +1,32 @@
 <template>
-  <div>
-    <h2>Sample</h2>
+  <v-container>
+ 
+    <h2>Axios Sample</h2>
     <section>
       <form @submit.prevent="apiGetTrigger">
-        <button>Getlist</button>
+        <button>GetPost</button>
       </form>
     </section>
     <div v-if="otherError">
       <h2>otherError !! {{ otherError }}</h2>
     </div>
     <div v-if="isLoading"><h2>Fetching Data</h2></div>
-    <div v-for="list in response" :key="list.id">
-      <ul>
-        <li>
-          <p> {{ list.date }} </p>
-          <p><a v-bind:href="list.link">{{ list.title.rendered }}</a></p>
-        </li>
-      </ul>
+
+    <div v-for="post in response"
+         :key="post.id"
+    >
+      <v-row dense>
+        <v-col cols="6">
+          <p> {{ post.date }} </p>
+        </v-col>
+        <v-col cols="6">
+          <p><a v-bind:href="post.link">{{ post.title.rendered }}</a></p>
+        </v-col>
+      </v-row>
     </div>
-  </div>
+  </v-container>
 </template>
+
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
 import { useWpRestApi } from '~/composables/axios/useWpRestApi'
