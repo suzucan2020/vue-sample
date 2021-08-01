@@ -1,46 +1,47 @@
 <template>
-  <v-container>
-<div v-for
-    v-for="post in posts"
-    :key="post.id"
-  >
-  <v-row dense>
-    <v-col cols="6">
-    <p> {{ post.date }} </p>
-    </v-col>
-
-    <v-col cols="6">
-    <p><a v-bind:href="post.link">{{ post.title.rendered }}</a></p>
-    </v-col>
-  </v-row>
+  <div>
+    <h2>Sample</h2>
+    <section>
+      <form @submit.prevent="apiGetTrigger">
+        <button>Getlist</button>
+      </form>
+    </section>
+    <div v-if="otherError">
+      <h2>otherError !! {{ otherError }}</h2>
+    </div>
+    <div v-if="isLoading"><h2>Fetching Data</h2></div>
+    <div v-for="list in response" :key="list.id">
+      <ul>
+        <li>
+          <span>{{ list.name }}</span>
+          <span>{{ list.street }}</span>
+          <span>{{ list.city }}</span>
+          <span>{{ list.postal_code }}</span>
+        </li>
+      </ul>
+    </div>
   </div>
-  </v-container>
 </template>
+<script lang="ts">
+import { defineComponent } from '@nuxtjs/composition-api'
+import useSampleApi from '~/composable/axios/useWpRestApi'
+export default defineComponent({
+  setup(_props, {root}) {
+    const { $axios } = root
+    const {
+      response
+      isLoading,
+      apiGetTrigger,
+      otherError
+    } = useWpRestApi($axios)
 
+    apiGetTrigger() // こんな感じでsetup内で呼び出すとイベントではなくLifecycle内で呼ぶことも可能です。
 
-<script>
-export default {
-  asyncData({ $axios }) {
-    return $axios.get("http://13.231.178.0/wp-json/wp/v2/posts").then(res => {
-      return {
-        posts: res.data
-      }
-    })
-  },
-  data() {
     return {
-      message: "hello nuxt ",
+      isLoading,
+      response,
+      apiGetTrigger,
+      otherError
     }
-  },
-  methods: {
-    resetUser: function () {
-      this.posts = []
-    },
-    fetchUser: function () {
-      this.$axios.get("http://13.231.178.0/wp-json/wp/v2/posts").then(res => {
-        this.posts = res.data
-      })
-    },
   }
-}
-</script>
+})  
