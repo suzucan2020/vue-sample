@@ -29,7 +29,7 @@
 
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
-import { useWpRestApi } from '~/composables/axios/useWpRestApi'
+import { useWpRestApi } from '~/composables/store/topLogic'
 export default defineComponent({
   setup(_props, {root}) {
     const { $axios } = root
